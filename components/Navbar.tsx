@@ -24,7 +24,7 @@ function Logo() {
           GLORY
         </span>
         <span className="mt-1 font-serif text-2xl font-bold leading-none tracking-tight text-gold">
-          DIGITAL
+          DIGITIL
         </span>
         <span className="mt-1 text-[8px] font-medium uppercase tracking-[3px] text-grey-light">
           BY AF DISTRY
@@ -64,7 +64,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="flex h-20 items-center justify-between px-6 md:px-12">
-          <Link href="/" aria-label="GLORY DIGITAL by AF DISTRY">
+          <Link href="/" aria-label="GLORY DIGITIL by AF DISTRY">
             <Logo />
           </Link>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
             <Link
               href="/"
               className="absolute left-6 top-6"
-              aria-label="GLORY DIGITAL by AF DISTRY"
+              aria-label="GLORY DIGITIL by AF DISTRY"
               onClick={() => setMobileOpen(false)}
             >
               <Logo />

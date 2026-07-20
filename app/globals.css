@@ -11,6 +11,23 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes sector-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.sector-marquee {
+  animation: sector-marquee 42s linear infinite;
+}
+
+.sector-marquee:hover {
+  animation-play-state: paused;
+}
+
 body {
   background: #0a1428;
   color: white;

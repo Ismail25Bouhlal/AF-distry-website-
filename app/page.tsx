@@ -1,8 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  ShoppingCart,
+  UtensilsCrossed,
+  Pill,
+  BedDouble,
+  Croissant,
+  Beef,
+  Fuel,
+  Hospital,
+} from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import img from "../assets/574dd64c-ec33-4084-9d5d-8729d7d18130.png";
+import borneImg from "../assets/borne_de_commande.jpeg";
+import ecranImg from "../assets/Ecran_indoor.jpg";
+import monnayeurImg from "../assets/8bff627808f5da5e2b8580499e7ea7d667798c52.jpg";
 
 
 const easePremium = [0.4, 0, 0.2, 1] as const;
@@ -48,23 +63,26 @@ const products = [
   {
     number: "01",
     label: "SOLUTION 01",
-    title: "Caisses Automatiques",
+    title: "Caisses Automatiques (Monnayeur)",
     description:
       "Gestion cash automatisée, réconciliation en temps réel, sécurité maximale.",
+    image: monnayeurImg,
   },
   {
     number: "02",
     label: "SOLUTION 02",
-    title: "Bornes de Commande",
+    title: "Bornes de Commande & Caisses",
     description:
       "Commande en libre-service, expérience client optimisée, augmentation du panier moyen.",
+    image: borneImg,
   },
   {
     number: "03",
     label: "SOLUTION 03",
-    title: "Monayeurs Cash Infinity",
+    title: "Écrans Digitaux",
     description:
-      "Technologie Glory japonaise, comptage précis, recyclage automatique des espèces.",
+      "Affichage dynamique et menus interactifs pour une communication visuelle impactante en point de vente.",
+    image: ecranImg,
   },
 ];
 
@@ -72,6 +90,17 @@ const stats = [
   { value: "10+", label: "ANNÉES D'EXPERTISE" },
   { value: "500+", label: "INSTALLATIONS AU MAROC" },
   { value: "24/7", label: "SUPPORT TECHNIQUE" },
+];
+
+const sectors = [
+  { name: "Grande Distribution", icon: ShoppingCart },
+  { name: "Restauration", icon: UtensilsCrossed },
+  { name: "Boulangerie", icon: Croissant },
+  { name: "Boucherie", icon: Beef },
+  { name: "Pharmacies", icon: Pill },
+  { name: "Hôpitaux", icon: Hospital },
+  { name: "Hôtellerie", icon: BedDouble },
+  { name: "Stations Service", icon: Fuel },
 ];
 
 function StatItem({
@@ -114,10 +143,11 @@ function AboutVisual() {
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-0 opacity-10"
+          className="pointer-events-none absolute inset-0 opacity-45"
           style={{
-            backgroundImage: `radial-gradient(circle, #d4a054 1px, transparent 1px)`,
-            backgroundSize: "24px 24px",
+            backgroundImage: `url(${img.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           aria-hidden
         />
@@ -180,12 +210,34 @@ function ProductCard({
         ease: easePremium,
         delay: index * 0.15,
       }}
-      className="group relative aspect-[4/5] cursor-pointer border border-white/5 bg-navy-light p-10 transition-all duration-500 hover:-translate-y-1 hover:border-gold/30"
+      className="group relative aspect-[4/5] cursor-pointer overflow-hidden border border-white/5 bg-navy-light transition-all duration-500 hover:-translate-y-1 hover:border-gold/30"
     >
-      <div className="flex h-full flex-col justify-between">
-        <span className="font-serif text-7xl italic text-gold/40 transition-all duration-500 group-hover:text-gold">
-          {product.number}
-        </span>
+      {product.image && (
+        <>
+          <Image
+            src={product.image}
+            alt={product.title}
+            fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            className="object-cover opacity-60 grayscale-[15%] transition-all duration-700 ease-out group-hover:scale-105 group-hover:opacity-90 group-hover:grayscale-0"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/75 to-navy-deep/20"
+            aria-hidden
+          />
+        </>
+      )}
+      <div className="relative flex h-full flex-col justify-between p-10">
+        {product.image ? (
+          <span
+            className="h-px w-10 bg-gold-muted transition-all duration-500 group-hover:w-16"
+            aria-hidden
+          />
+        ) : (
+          <span className="font-serif text-7xl italic text-gold/40 transition-all duration-500 group-hover:text-gold">
+            {product.number}
+          </span>
+        )}
 
         <div>
           <p className="text-[10px] uppercase tracking-[3px] text-gold">
@@ -345,8 +397,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: easePremium, delay: 0.6 }}
             >
-              Caisses automatiques. Bornes de commande. Monayeurs Glory Cash
-              Infinity. Une distribution exclusive au Maroc.
+              Caisses Automatiques (Monnayeur). Bornes de commande. Monayeurs Glory Cash
+              Infinity.Écrans Digitaux.<br /> Une distribution exclusive au Maroc.
             </motion.p>
 
             <motion.div
@@ -429,8 +481,8 @@ export default function Home() {
                 NOS SOLUTIONS
               </p>
               <h2 className="mt-6 font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-                Trois piliers pour votre{" "}
-                <span className="italic text-gold">transformation.</span>
+                Trois piliers pour votre transformation{" "}
+                <span className="italic text-gold">Digital</span>
               </h2>
             </div>
 
@@ -573,36 +625,37 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Sectors Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-white/5 mt-20">
-            {[
-              { name: "Grande Distribution", num: "01" },
-              { name: "Restauration", num: "02" },
-              { name: "Pharmacies", num: "03" },
-              { name: "Hôtellerie", num: "04" },
-              { name: "Banques", num: "05" },
-              { name: "Stations Service", num: "06" },
-            ].map((sector, i) => (
-              <motion.div
-                key={sector.num}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
-                className="bg-navy-deep p-8 md:p-10 group hover:bg-navy-light transition-all duration-500 cursor-pointer aspect-square flex flex-col justify-between"
+          {/* Sectors Slider */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            className="relative mt-20 overflow-hidden"
+          >
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-navy-deep to-transparent md:w-32" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-navy-deep to-transparent md:w-32" />
+            <div className="sector-marquee flex w-max gap-px bg-white/5">
+              {[...sectors, ...sectors].map((sector, i) => (
+              <div
+                key={`${sector.name}-${i}`}
+                aria-hidden={i >= sectors.length ? true : undefined}
+                className="group flex w-[220px] shrink-0 flex-col items-center justify-center bg-navy-deep p-8 text-center transition-all duration-500 hover:bg-navy-light md:w-[260px] md:p-10"
               >
-                <span className="font-serif italic text-3xl text-gold/30 group-hover:text-gold transition-all duration-500">
-                  {sector.num}
-                </span>
-                <div>
-                  <div className="w-6 h-px bg-gold-muted mb-3 group-hover:w-12 transition-all duration-500" />
-                  <h3 className="font-serif text-lg md:text-xl text-white leading-tight">
-                    {sector.name}
-                  </h3>
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold-muted/30 group-hover:border-gold group-hover:scale-110 transition-all duration-500">
+                  <sector.icon
+                    className="h-6 w-6 stroke-[1.25] text-gold-muted/70 group-hover:text-gold transition-all duration-500"
+                    aria-hidden
+                  />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <div className="w-6 h-px bg-gold-muted my-4 group-hover:w-12 transition-all duration-500" />
+                <h3 className="font-serif text-lg md:text-xl text-white leading-tight">
+                  {sector.name}
+                </h3>
+              </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
