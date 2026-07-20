@@ -404,8 +404,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: easePremium, delay: 0.6 }}
             >
-              Caisses Automatiques (Monnayeur). Bornes de commande. Monayeurs Glory Cash
-              Infinity.Écrans Digitaux.<br /> Une distribution exclusive au Maroc.
+              Caisses Automatiques (Monnayeur). Bornes de commande. Monayeurs{" "}
+              <span className="font-sans font-black tracking-tight text-white">
+                Glory
+              </span>{" "}
+              Cash Infinity.Écrans Digitaux.<br /> Une distribution exclusive au Maroc.
             </motion.p>
 
             <motion.div
@@ -499,8 +502,11 @@ export default function Home() {
             <div className="flex items-end lg:col-span-1">
               <p className="max-w-md text-base leading-relaxed text-grey-light">
                 De la caisse automatique au monayeur intelligent, nous équipons
-                les commerces marocains avec les technologies Glory les plus
-                avancées.
+                les commerces marocains avec les technologies{" "}
+                <span className="font-sans font-black tracking-tight text-white">
+                  Glory
+                </span>{" "}
+                les plus avancées.
               </p>
             </div>
           </motion.div>
@@ -561,7 +567,10 @@ export default function Home() {
                 className="mt-8 max-w-xl text-base leading-relaxed text-navy-deep/70 md:text-lg"
               >
                 Depuis 2015, AF DISTRY accompagne les enseignes marocaines dans
-                leur transformation digitale. Distributeur exclusif de Glory
+                leur transformation digitale. Distributeur exclusif de{" "}
+                <span className="font-sans font-black tracking-tight">
+                  Glory
+                </span>{" "}
                 Global Solutions, nous combinons la précision de
                 l&apos;ingénierie japonaise avec une expertise terrain locale.
               </motion.p>
@@ -589,8 +598,11 @@ export default function Home() {
                   &ldquo;
                 </span>
                 <blockquote className="mt-4 max-w-2xl font-serif text-2xl italic leading-snug text-navy-deep md:text-3xl">
-                  La précision est la seule chose qui compte. C&apos;est ce que
-                  Glory apporte, et c&apos;est ce que nous distribuons.
+                  La précision est la seule chose qui compte. C&apos;est ce que{" "}
+                  <span className="font-sans font-black tracking-tight">
+                    Glory
+                  </span>{" "}
+                  apporte, et c&apos;est ce que nous distribuons.
                 </blockquote>
               </div>
 

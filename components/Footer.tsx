@@ -16,7 +16,11 @@ export default function Footer() {
               BY AF DISTRY
             </p>
             <p className="text-sm text-grey-light leading-relaxed mt-6 max-w-xs">
-              Distributeur officiel des solutions Glory Cash Infinity au Maroc.
+              Distributeur officiel des solutions{" "}
+              <span className="font-sans font-black tracking-tight text-white">
+                Glory
+              </span>{" "}
+              Cash Infinity au Maroc.
             </p>
           </div>
 
@@ -80,7 +84,10 @@ export default function Footer() {
                   href="#"
                   className="text-sm text-white/70 hover:text-gold transition-colors"
                 >
-                  Partenariat Glory
+                  Partenariat{" "}
+                  <span className="font-sans font-black tracking-tight text-white">
+                    Glory
+                  </span>
                 </a>
               </li>
               <li>
@@ -126,7 +133,10 @@ export default function Footer() {
               Partenaire Officiel
             </p>
             <p className="font-serif text-lg text-white">
-              Glory Global Solutions
+              <span className="font-sans font-black tracking-tight">
+                Glory
+              </span>{" "}
+              Global Solutions
             </p>
           </div>
 
