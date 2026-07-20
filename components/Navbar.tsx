@@ -20,7 +20,7 @@ function Logo() {
         aria-hidden
       />
       <div className="flex flex-col">
-        <span className="font-serif text-2xl font-bold leading-none tracking-tight text-white">
+        <span className="font-sans text-2xl font-black leading-none tracking-tight text-white">
           GLORY
         </span>
         <span className="mt-1 font-serif text-2xl font-bold leading-none tracking-tight text-gold">

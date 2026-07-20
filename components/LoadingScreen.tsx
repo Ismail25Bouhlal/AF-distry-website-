@@ -40,7 +40,7 @@ export default function LoadingScreen() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <h1 className="font-serif text-5xl md:text-6xl font-bold text-white leading-none">
+              <h1 className="font-sans text-5xl md:text-6xl font-black tracking-tight text-white leading-none">
                 GLORY
               </h1>
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-gold leading-none mt-2">

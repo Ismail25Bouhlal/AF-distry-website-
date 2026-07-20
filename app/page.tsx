@@ -156,7 +156,10 @@ function AboutVisual() {
         </div>
         <div className="absolute bottom-0 left-0 bg-navy-deep/80 px-4 py-2 backdrop-blur-sm">
           <p className="text-[10px] uppercase tracking-[3px] text-gold">
-            GLORY PARTNERSHIP
+            <span className="font-sans font-black tracking-tight text-white">
+              GLORY
+            </span>{" "}
+            PARTNERSHIP
           </p>
         </div>
         <p
@@ -364,7 +367,11 @@ export default function Home() {
             >
               <span className="h-px w-[30px] shrink-0 bg-gold" aria-hidden />
               <p className="text-[10px] font-medium uppercase tracking-[4px] text-gold">
-                DISTRIBUTEUR OFFICIEL GLORY AU MAROC
+                DISTRIBUTEUR OFFICIEL{" "}
+                <span className="font-sans font-black tracking-tight text-white">
+                  GLORY
+                </span>{" "}
+                AU MAROC
               </p>
             </motion.div>
 
@@ -443,7 +450,10 @@ export default function Home() {
                   className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
                   aria-hidden
                 />
-                GLORY GLOBAL SOLUTIONS
+                <span className="font-sans font-black tracking-tight">
+                  GLORY
+                </span>{" "}
+                GLOBAL SOLUTIONS
               </p>
             </motion.div>
           </div>

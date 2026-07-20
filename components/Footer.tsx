@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-white/10">
           {/* Brand column */}
           <div className="md:col-span-1">
-            <h3 className="font-serif text-2xl font-bold text-white leading-none">
+            <h3 className="font-sans text-2xl font-black tracking-tight text-white leading-none">
               GLORY
             </h3>
             <h3 className="font-serif text-2xl font-bold text-gold leading-none mt-1">
