@@ -44,7 +44,7 @@ export default function LoadingScreen() {
                 GLORY
               </h1>
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-gold leading-none mt-2">
-                DIGITAL
+                DIGITIL
               </h1>
               <p className="text-[9px] uppercase tracking-[4px] text-grey-light mt-4">
                 BY AF DISTRY
