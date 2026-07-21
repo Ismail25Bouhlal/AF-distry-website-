@@ -67,6 +67,7 @@ const products = [
     description:
       "Gestion cash automatisée, réconciliation en temps réel, sécurité maximale.",
     image: monnayeurImg,
+    href: "/solutions/monnayeur",
   },
   {
     number: "02",
@@ -75,6 +76,7 @@ const products = [
     description:
       "Commande en libre-service, expérience client optimisée, augmentation du panier moyen.",
     image: borneImg,
+    href: "/solutions/bornes",
   },
   {
     number: "03",
@@ -83,6 +85,7 @@ const products = [
     description:
       "Affichage dynamique et menus interactifs pour une communication visuelle impactante en point de vente.",
     image: ecranImg,
+    href: "/solutions/ecrans",
   },
 ];
 
@@ -205,16 +208,8 @@ function ProductCard({
   product: (typeof products)[number];
   index: number;
 }) {
-  return (
-    <motion.article
-      {...fadeUp}
-      transition={{
-        duration: 0.8,
-        ease: easePremium,
-        delay: index * 0.15,
-      }}
-      className="group relative aspect-[4/5] cursor-pointer overflow-hidden border border-white/5 bg-navy-light transition-all duration-500 hover:-translate-y-1 hover:border-gold/30"
-    >
+  const cardContent = (
+    <>
       {product.image && (
         <>
           <Image
@@ -257,8 +252,31 @@ function ProductCard({
           </span>
         </div>
       </div>
-    </motion.article>
+    </>
   );
+
+  const motionProps = {
+    ...fadeUp,
+    transition: {
+      duration: 0.8,
+      ease: easePremium,
+      delay: index * 0.15,
+    },
+    className:
+      "group relative aspect-[4/5] block cursor-pointer overflow-hidden border border-white/5 bg-navy-light transition-all duration-500 hover:-translate-y-1 hover:border-gold/30",
+  };
+
+  if (product.href) {
+    return (
+      <motion.div {...motionProps}>
+        <Link href={product.href} className="absolute inset-0">
+          {cardContent}
+        </Link>
+      </motion.div>
+    );
+  }
+
+  return <motion.article {...motionProps}>{cardContent}</motion.article>;
 }
 
 function HeroVisual() {
@@ -406,7 +424,7 @@ export default function Home() {
             >
               Caisses Automatiques (Monnayeur). Bornes de commande. Monayeurs{" "}
               <span className="font-sans font-black tracking-tight text-white">
-                Glory
+                GLORY
               </span>{" "}
               Cash Infinity.Écrans Digitaux.<br /> Une distribution exclusive au Maroc.
             </motion.p>
@@ -504,7 +522,7 @@ export default function Home() {
                 De la caisse automatique au monayeur intelligent, nous équipons
                 les commerces marocains avec les technologies{" "}
                 <span className="font-sans font-black tracking-tight text-white">
-                  Glory
+                  GLORY
                 </span>{" "}
                 les plus avancées.
               </p>
@@ -569,7 +587,7 @@ export default function Home() {
                 Depuis 2015, AF DISTRY accompagne les enseignes marocaines dans
                 leur transformation digitale. Distributeur exclusif de{" "}
                 <span className="font-sans font-black tracking-tight">
-                  Glory
+                  GLORY
                 </span>{" "}
                 Global Solutions, nous combinons la précision de
                 l&apos;ingénierie japonaise avec une expertise terrain locale.
@@ -600,7 +618,7 @@ export default function Home() {
                 <blockquote className="mt-4 max-w-2xl font-serif text-2xl italic leading-snug text-navy-deep md:text-3xl">
                   La précision est la seule chose qui compte. C&apos;est ce que{" "}
                   <span className="font-sans font-black tracking-tight">
-                    Glory
+                    GLORY
                   </span>{" "}
                   apporte, et c&apos;est ce que nous distribuons.
                 </blockquote>

@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="text-sm text-grey-light leading-relaxed mt-6 max-w-xs">
               Distributeur officiel des solutions{" "}
               <span className="font-sans font-black tracking-tight text-white">
-                Glory
+                GLORY
               </span>{" "}
               Cash Infinity au Maroc.
             </p>
@@ -86,7 +86,7 @@ export default function Footer() {
                 >
                   Partenariat{" "}
                   <span className="font-sans font-black tracking-tight text-white">
-                    Glory
+                    GLORY
                   </span>
                 </a>
               </li>
@@ -134,7 +134,7 @@ export default function Footer() {
             </p>
             <p className="font-serif text-lg text-white">
               <span className="font-sans font-black tracking-tight">
-                Glory
+                GLORY
               </span>{" "}
               Global Solutions
             </p>
