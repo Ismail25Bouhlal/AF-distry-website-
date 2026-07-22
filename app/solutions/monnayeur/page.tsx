@@ -114,7 +114,11 @@ export default function MonnayeurPage() {
               </p>
               <h1 className="mt-6 font-serif text-4xl font-bold leading-[1.05] text-white md:text-5xl lg:text-6xl">
                 C&apos;est quoi{" "}
-                <span className="italic text-gold">un monnayeur</span> ?
+                <span className="italic text-gold">un monnayeur</span>{" "}
+                <span className="font-sans font-black tracking-tight text-white">
+                  GLORY
+                </span>{" "}
+                ?
               </h1>
 
               <p className="mt-6 text-[11px] font-semibold uppercase tracking-[3px] text-gold-muted">
@@ -122,10 +126,10 @@ export default function MonnayeurPage() {
               </p>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-grey-light md:text-lg">
                 Un monnayeur automatique prend en charge l&apos;intégralité de
-                la gestion des espèces au point de vente. Il accepte billets
-                et pièces, compte le montant exact et rend la monnaie sans
-                intervention du personnel. Résultat : zéro erreur, zéro
-                perte, expérience client fluide et professionnelle.
+                la gestion des espèces au point de vente. Il accepte billets et
+                pièces, compte le montant exact et rend la monnaie sans
+                intervention du personnel. Résultat : zéro erreur, zéro perte,
+                expérience client fluide et professionnelle.
               </p>
 
               <div className="mt-10 flex flex-row flex-wrap items-center gap-4">
@@ -222,14 +226,15 @@ export default function MonnayeurPage() {
               EN SITUATION
             </p>
             <h2 className="mt-6 font-serif text-3xl font-bold leading-tight text-navy-deep md:text-4xl lg:text-5xl">
-              Intégré à vos <span className="italic text-gold-muted">comptoirs</span>,
-              sans effort.
+              Intégré à vos{" "}
+              <span className="italic text-gold-muted">comptoirs</span>, sans
+              effort.
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-deep/70 md:text-lg">
               Le CI-10X s&apos;installe directement dans vos meubles de caisse
-              existants — boulangeries, commerces de proximité, grande
-              distribution — pour une expérience fluide, du comptoir jusqu&apos;au
-              rendu de monnaie.
+              existants — boulangeries / Patisserie, commerces de proximité, grande
+              distribution — pour une expérience fluide, du comptoir
+              jusqu&apos;au rendu de monnaie.
             </p>
           </motion.div>
 

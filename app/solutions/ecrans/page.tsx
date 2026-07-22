@@ -144,7 +144,7 @@ export default function EcransPage() {
               <p className="mt-4 max-w-xl text-base leading-relaxed text-grey-light md:text-lg">
                 Un écran digital remplace vos affiches et menus papier par un
                 contenu dynamique, actualisable à distance et en temps réel.
-                Menus, promotions, prix, vidéos : vous mettez à jour votre
+                Menus Board, promotions, prix, vidéos : vous mettez à jour votre
                 communication en quelques clics, sans réimpression ni
                 déplacement. Résultat : une image de marque moderne, des
                 messages toujours à jour, un impact visuel renforcé en point

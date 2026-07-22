@@ -10,7 +10,7 @@ export default function Footer() {
               GLORY
             </h3>
             <h3 className="font-serif text-2xl font-bold text-gold leading-none mt-1">
-              DIGITAL
+              DIGITILL
             </h3>
             <p className="text-[8px] uppercase tracking-[3px] text-grey-light mt-3">
               BY AF DISTRY

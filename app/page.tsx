@@ -19,7 +19,6 @@ import borneImg from "../assets/borne_de_commande.jpeg";
 import ecranImg from "../assets/Ecran_indoor.jpg";
 import monnayeurImg from "../assets/8bff627808f5da5e2b8580499e7ea7d667798c52.jpg";
 
-
 const easePremium = [0.4, 0, 0.2, 1] as const;
 
 const headingLineOne: { text: string; className: string }[] = [
@@ -65,7 +64,7 @@ const products = [
     label: "SOLUTION 01",
     title: "Caisses Automatiques (Monnayeur)",
     description:
-      "Gestion cash automatisée, réconciliation en temps réel, sécurité maximale.",
+      "Gestion de l‘espēce automatisée, sécurité maximale.",
     image: monnayeurImg,
     href: "/solutions/monnayeur",
   },
@@ -83,7 +82,7 @@ const products = [
     label: "SOLUTION 03",
     title: "Écrans Digitaux",
     description:
-      "Affichage dynamique et menus interactifs pour une communication visuelle impactante en point de vente.",
+      "Affichage dynamique et menus Board interactifs pour une communication visuelle impactante en point de vente.",
     image: ecranImg,
     href: "/solutions/ecrans",
   },
@@ -422,11 +421,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: easePremium, delay: 0.6 }}
             >
-              Caisses Automatiques (Monnayeur). Bornes de commande. Monayeurs{" "}
+              Caisses Automatiques (Monnayeur{" "}
               <span className="font-sans font-black tracking-tight text-white">
                 GLORY
               </span>{" "}
-              Cash Infinity.Écrans Digitaux.<br /> Une distribution exclusive au Maroc.
+              Cash Infinity ). Bornes de commande. Écrans D ’affichage dynamique.
             </motion.p>
 
             <motion.div
@@ -585,7 +584,7 @@ export default function Home() {
                 className="mt-8 max-w-xl text-base leading-relaxed text-navy-deep/70 md:text-lg"
               >
                 Depuis 2015, AF DISTRY accompagne les enseignes marocaines dans
-                leur transformation digitale. Distributeur exclusif de{" "}
+                leur transformation digitale. Distributeur Officiel de{" "}
                 <span className="font-sans font-black tracking-tight">
                   GLORY
                 </span>{" "}
@@ -677,22 +676,22 @@ export default function Home() {
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-navy-deep to-transparent md:w-32" />
             <div className="sector-marquee flex w-max gap-px bg-white/5">
               {[...sectors, ...sectors].map((sector, i) => (
-              <div
-                key={`${sector.name}-${i}`}
-                aria-hidden={i >= sectors.length ? true : undefined}
-                className="group flex w-[220px] shrink-0 flex-col items-center justify-center bg-navy-deep p-8 text-center transition-all duration-500 hover:bg-navy-light md:w-[260px] md:p-10"
-              >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold-muted/30 group-hover:border-gold group-hover:scale-110 transition-all duration-500">
-                  <sector.icon
-                    className="h-6 w-6 stroke-[1.25] text-gold-muted/70 group-hover:text-gold transition-all duration-500"
-                    aria-hidden
-                  />
+                <div
+                  key={`${sector.name}-${i}`}
+                  aria-hidden={i >= sectors.length ? true : undefined}
+                  className="group flex w-[220px] shrink-0 flex-col items-center justify-center bg-navy-deep p-8 text-center transition-all duration-500 hover:bg-navy-light md:w-[260px] md:p-10"
+                >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold-muted/30 group-hover:border-gold group-hover:scale-110 transition-all duration-500">
+                    <sector.icon
+                      className="h-6 w-6 stroke-[1.25] text-gold-muted/70 group-hover:text-gold transition-all duration-500"
+                      aria-hidden
+                    />
+                  </div>
+                  <div className="w-6 h-px bg-gold-muted my-4 group-hover:w-12 transition-all duration-500" />
+                  <h3 className="font-serif text-lg md:text-xl text-white leading-tight">
+                    {sector.name}
+                  </h3>
                 </div>
-                <div className="w-6 h-px bg-gold-muted my-4 group-hover:w-12 transition-all duration-500" />
-                <h3 className="font-serif text-lg md:text-xl text-white leading-tight">
-                  {sector.name}
-                </h3>
-              </div>
               ))}
             </div>
           </motion.div>
